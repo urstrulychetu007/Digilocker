@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digilocker - Dashboard</title>
+    <style>
+        html,
+        body {
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            height: 100%;
+            background: #eee;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 50%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #eee;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navbar .logo {
+            height: 58px;
+        }
+
+        .navbar .logo img {
+            height: 70%;
+            padding: 10px;
+        }
+
+        button {
+            text-transform: uppercase;
+            width: 100px;
+            margin-top: 5%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .signin {
+            background: none;
+            outline: none;
+            border: 0;
+            font-size: 15px;
+            color: blue;
+        }
+
+        .signup {
+            background-color: blue;
+            color: white;
+            border-radius: 45px;
+            border: 1px solid blue;
+
+        }
+
+        .data {
+            background-color: #eee;
+        }
+
+        .data img {
+            margin-top: 5%;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        .sticky+.content {
+            padding-top: 60px;
+        }
+
+        .body-content {
+            display: flex;
+            height: 100%;
+        }
+
+        .content {
+            margin-left: 5%;
+            color: #000080;
+        }
+
+        .side-nav {
+            width: 400px;
+            height: 100%;
+            background-color: white;
+        }
+
+        .side-nav ul {
+            list-style: none;
+        }
+
+        .side-nav ul li {
+            font-size: 22px;
+            padding: 25px;
+            border: 1px solid #eee;
+            margin-top: 2%;
+            cursor: pointer;
+        }
+
+        .side-nav ul li:hover {
+            color: blue;
+        }
+
+        .banners {
+            display: flex;
+            /* justify-content: space-evenly; */
+        }
+
+        .banners img {
+            height: 120px;
+            margin-left: 1%;
+        }
+
+        h3 {
+            color: #000080;
+        }
+        .card
+        {
+            display: flex;
+            cursor: pointer;
+           
+
+        }
+        .cards
+        {
+            background-color: white;
+            background: white ;
+            display: block;
+            width: 300px;
+            padding: 15px;
+            font-size: 12px;
+            margin-left: 2%;
+            border: 1px solid white;
+            border-radius: 10px;
+
+        }
+        .cards img
+        {
+            width: 45px;
+            height: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img src="data:image/jpg;base64,{{data}}" alt=""> -->
+    <!-- <button onclick="window.location='{{data}}'">issue</button> -->
+    <div class="navbar">
+
+
+        <div class="logo">
+            <img src="https://www.digilocker.gov.in/assets/img/digiLocker-flag-small.png" alt="">
+        </div>
+
+
+    </div>
+
+    <div class="body-content">
+        <div class="side-nav">
+            <ul>
+                <li>Home</li>
+                <li>Issued Documents</li>
+                <li>My Profile</li>
+                <li onclick="window.location='/'">Logout</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Welcome {{user}}!</h2>
+            <div class="new-in-digilocker">
+                <h3>New In Digilocker</h3>
+                <div class="banners">
+                    <img src="https://www.digilocker.gov.in/assets/img/mobile/img/en/whats-new/promotional-1-v17.png"
+                        alt="">
+                    <img src="https://www.digilocker.gov.in/assets/img/mobile/img/en/whats-new/promotional-2-v17.png"
+                        alt="">
+                    <img src="https://www.digilocker.gov.in/assets/img/mobile/img/en/whats-new/promotional-3-v14.png"
+                        alt="">
+                    <img src="https://www.digilocker.gov.in/assets/img/mobile/img/en/whats-new/promotional-4-v14.png"
+                        alt="">
+                    <img src="https://www.digilocker.gov.in/assets/img/mobile/img/en/whats-new/promotional-4-v16.png"
+                        alt="">
+
+                </div>
+            </div>
+           <h3>Available in Digilocker</h3>
+           <div class="card">
+            <ion-card _ngcontent-eff-c142="" mode="ios" class="cards" onclick="download('A')"  title="Aadhaar Card">
+            <ion-item _ngcontent-eff-c142="" lines="none" class="item ios item-lines-none hydrated item-label">
+                <ion-avatar _ngcontent-eff-c142="" slot="start" class="ios hydrated"><img _ngcontent-eff-c142=""
+                        offset="100" alt="Aadhaar Card"
+                        src="https://img1.digitallocker.gov.in/public/assets/logo/issuers/000133.png"
+                        class="  ng-lazyloaded">
+                    <!---->
+                    <!---->
+                </ion-avatar>
+                <ion-label _ngcontent-eff-c142="" class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+                    <h3 _ngcontent-eff-c142="">Aadhaar Card</h3>
+                    <p _ngcontent-eff-c142="" class="ion-text-wrap" title=" ************"> ************ </p>
+                </ion-label>
+            </ion-item>
+            <ion-item _ngcontent-eff-c142="" lines="none" class="item ios item-lines-none hydrated item-label">
+                <ion-label _ngcontent-eff-c142="" class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+                    <p _ngcontent-eff-c142="" class="ion-text-wrap"
+                        title="Aadhaar, Unique Identification Authority of India}}">Aadhaar, Unique Identification
+                        Authority of India </p>
+                </ion-label>
+            </ion-item>
+        </ion-card>
+        <ion-card _ngcontent-eff-c142="" mode="ios" class="cards" onclick="download('C')"
+        title="College ID card">
+        <ion-item _ngcontent-eff-c142="" lines="none" class="item ios item-lines-none hydrated item-label">
+            <ion-avatar _ngcontent-eff-c142="" slot="start" class="ios hydrated"><img _ngcontent-eff-c142=""
+                    offset="100" alt="Aadhaar Card"
+                    src="https://parents.kletech.ac.in/templates/contineoReg/images/logo.png"
+                    class="  ng-lazyloaded">
+                <!---->
+                <!---->
+            </ion-avatar>
+            <ion-label _ngcontent-eff-c142="" class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+                <h3 _ngcontent-eff-c142="">College ID Card</h3>
+                <p _ngcontent-eff-c142="" class="ion-text-wrap" title=" ************"> ************ </p>
+            </ion-label>
+        </ion-item>
+        <ion-item _ngcontent-eff-c142="" lines="none" class="item ios item-lines-none hydrated item-label">
+            <ion-label _ngcontent-eff-c142="" class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+                <p _ngcontent-eff-c142="" class="ion-text-wrap"
+                    title="College, Unique Identification KLE Technological University">College ID, Unique Identification
+                    KLE Technological University </p>
+            </ion-label>
+        </ion-item>
+    </ion-card>
+           </div>
+        </div>
+    </div>
+
+    <script>
+        function download(filetype) {
+            var element = document.createElement('a');
+    if (filetype=='A')
+    {
+        element.setAttribute('href', 'data:image/jpg;base64,' + encodeURIComponent("{{data}}"));
+        element.setAttribute('download', 'aadhar.jpg');
+
+    }
+    else
+    {
+        element.setAttribute('href', 'data:image/jpg;base64,' + encodeURIComponent("{{data1}}"));
+        element.setAttribute('download', 'clgid.jpg');
+
+    }
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+        }
+    </script>
+
+</body>
+
+</html>
